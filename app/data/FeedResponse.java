@@ -5,5 +5,6 @@ public class FeedResponse {
     public String description;
     public String pubDate;
     public String link;
+    public String  guid;
 
 }
