@@ -17,3 +17,10 @@ body {
 .material-icons {
     font-size=48px !important;
 }
+
+.message-card {
+    max-width: 75%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
