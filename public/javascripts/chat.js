@@ -11,7 +11,7 @@ app.controller('chatController', function ($scope) {
 	},
 
         {
-            'sender': 'BOR',
+            'sender': 'BOT',
             'text': "what"
                 }
                     ];
