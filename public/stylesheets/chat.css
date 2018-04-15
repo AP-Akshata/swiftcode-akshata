@@ -11,7 +11,7 @@ body {
 #message-pane {
     background-image: url("/assets/images/i.gif");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
 }
 
 #form-card {
