@@ -42,6 +42,12 @@ public class MessageActor extends UntypedActor {
             messageObject.sender = Message.Sender.BOT;
             out.tell(objectMapper.writeValueAsString(messageObject), self());
         }
+        else
+        {
+            messageObject.text="invalid";
+            messageObject.sender=Message.Sender.BOT;
+            out.tell(objectMapper.writeValueAsString(messageObject),self());
+        }
 
     }
 
