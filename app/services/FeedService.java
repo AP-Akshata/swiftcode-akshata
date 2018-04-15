@@ -23,10 +23,10 @@ public class FeedService {
             Document feedResponse = responsePromise.thenApply(WSResponse::asXml).toCompletableFuture().get();
             Node item=feedResponse.getFirstChild().getFirstChild().getChildNodes().item(10);
             feedResponseObject.title=item.getChildNodes().item(0).getFirstChild().getNodeValue();
-            feedResponseObject.link=item.getChildNodes().item(1).getFirstChild().getNodeValue();
+
             feedResponseObject.pubDate=item.getChildNodes().item(3).getFirstChild().getNodeValue();
             feedResponseObject.description=item.getChildNodes().item(4).getFirstChild().getNodeValue();
-            feedResponseObject.guid=item.getChildNodes().item(2).getFirstChild().getNodeValue();
+
         }
         catch (Exception e) {
             e.printStackTrace();

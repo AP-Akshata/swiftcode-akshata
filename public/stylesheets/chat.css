@@ -4,11 +4,12 @@ body {
     padding: 0px;
     margin: 0px;
     overflow: hidden;
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Gamja Flower',
+    cursive;
 }
 
 #message-pane {
-    background-image: url("/assets/images/image.gif");
+    background-image: url("/assets/images/i.gif");
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -25,5 +26,12 @@ body {
     max-width: 75%;
     border-radius: 10px;
     padding: 10px;
-    font-size: 14px;
+    font-size: 25px;
+}
+
+.message-time {
+    margin-top: 4px;
+    float: right;
+    color: #ff9999;
+    font-size: 20px;
 }

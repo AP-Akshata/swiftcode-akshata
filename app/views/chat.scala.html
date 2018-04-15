@@ -10,23 +10,29 @@
 </head>
 
 <body ng-app="chatApp" ng-controller="chatController" layout="row" flex='90' layout-align="center-stretch">
-    <md-card layout="column" flex='none' style="max-width:800px">
-        <md-content id="message-pane" layout='column' flex='80'>
+    <md-card layout="column" flex='90' style="max-width:800px">
+        <md-content id="message-pane" flex='90'>
             <div ng-repeat="msg in messages" layout="column" layout-align="{{msg.sender=='BOT'?'start start':'start end'}}">
-                <md-card class="message-card" ng-style="msg.sender=='BOT'? {'background-color':'#D0D0D0','color':'#0080ff','font-size':'large'}:
-                {'background-color':'#D0D0D0','color':'#0080ff','font-size':'large'}">
+                <md-card class="message-card" ng-style="msg.sender=='BOT'? {'background-color':'#D0D0D0','color':'#0080ff'}:
+                {'background-color':'#D0D0D0','color':'#0080ff'}">
                     <span>{{msg.text}}</span>
+                    <span ng-bind-html="trust(msg.feedResponse.description)"> {{msg.feedResponse.description}}
+                    </span>
+                    <span class="message-time"> {{msg.time}}</span>
                 </md-card>
             </div>
         </md-content>
         <md-card id="form-card" class="md-whiteframe-8dp" layout='row' flex='20'>
-            <form>
-                <md-input-container layout='row' flex='90'>
-                    <label>Message</label>
-                    <input ng-model="usermsg">
+            <form layout="row" flex ng-submit="sendMessage()">
+                <md-input-container flex='90'>
+                    <label>
+                        <font size='06px'>
+                            <B>Type Here</font></label>
+                    <input ng-model="userMessage">
                 </md-input-container flex>
             </form>
-            <md-button class="md-fab md-accent" flex="none" layout="row" layout-align="center center"><i class="material-icons">&#xE163;</i></md-button>
+            <md-button class="md-fab md-accent" flex="none" layout="row" layout-align="center center"
+                ng-click="sendMessage()"><i class="material-icons">&#xE163;</i></md-button>
             </md-button>
         </md-card>
     </md-card>
