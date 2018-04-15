@@ -4,10 +4,13 @@ body {
     padding: 0px;
     margin: 0px;
     overflow: hidden;
+    font-family: 'Gamja Flower', cursive;
 }
 
 #message-pane {
-    background-color: #330033;
+    background-image: url("/assets/images/image.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 #form-card {

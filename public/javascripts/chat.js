@@ -1,4 +1,9 @@
 var app = angular.module('chatApp', ['ngMaterial']);
+app.config(function ($mdThemingProvider) {
+    $mdThemingProvider.theme('default')
+        .primaryPalette('purple')
+        .accentPalette('red');
+});
 app.controller('chatController', function ($scope) {
     $scope.messages = [
         {
@@ -11,7 +16,7 @@ app.controller('chatController', function ($scope) {
 	},
 
         {
-            'sender': 'BOT',
+            'sender': 'USER',
             'text': "what"
                 }
                     ];
